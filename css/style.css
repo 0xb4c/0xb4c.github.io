@@ -1,0 +1,323 @@
+:root {
+    --bg: #0d1117;
+    --surface: #0f1520;
+    --surface-2: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #00ff41;
+    --red: #ff5f57;
+    --yellow: #fdbc2c;
+    --green: #28c840;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: "Fira Code", "JetBrains Mono", monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    position: relative;
+}
+
+section {
+    scroll-margin-top: 56px;
+    min-height: 50vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.terminal {
+    background-color: #0f1520;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: "Fira Code", monospace;
+    color: #c9d1d9;
+
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+
+
+.terminal-header {
+    background: linear-gradient(180deg, #161b22, #121826);
+    border-bottom: 1px solid #30363d;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.traffic {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    min-width: 0;
+}
+
+.traffic .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    opacity: .9;
+    width: clamp(8px, 2.8vw, 12px);
+    height: clamp(8px, 2.8vw, 12px);
+    margin: 0;
+}
+
+.term-title {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(.85rem, 3.2vw, 1rem);
+    min-width: 0;
+}
+
+.dot-close {
+    background: var(--red);
+}
+
+.dot-min {
+    background: var(--yellow);
+}
+
+.dot-max {
+    background: var(--green);
+}
+
+@media (max-width: 420px) {
+    .terminal-header {
+        column-gap: .4rem;
+    }
+
+    .traffic {
+        gap: .35rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .terminal-header {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "title right"
+            "traffic traffic";
+        row-gap: .35rem;
+    }
+
+    .term-title {
+        grid-area: title;
+    }
+
+    .traffic {
+        grid-area: traffic;
+        justify-content: flex-start;
+    }
+}
+
+.terminal-body {
+    color: var(--text);
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.terminal-body a {
+    color: var(--accent);
+}
+
+.terminal-body a:hover {
+    color: #1aff66;
+}
+
+.line {
+    margin: .35rem 0;
+}
+
+.key {
+    color: var(--muted);
+}
+
+.val {
+    color: var(--text);
+}
+
+/* Prompt style */
+.prompt-line {
+    color: #c9d1d9;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px dashed #30363d;
+    border-radius: 6px;
+    padding: .35rem .6rem;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.prompt-line .user {
+    color: #00ff41;
+}
+
+.prompt-line .path {
+    color: #6ea77a;
+}
+
+/* Scrollbar gọn */
+.terminal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #232a36;
+    border: 2px solid var(--surface);
+    border-radius: 8px;
+}
+
+/* Style for cards inside terminal */
+
+.terminal .card,
+.terminal .list-group-item {
+    background: #0000;
+    border: 1px solid #1b5e3b;
+    color: #d8f5e5;
+    box-shadow: 0 0 12px rgba(0, 255, 153, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.terminal .card h6,
+.terminal .list-group-item strong {
+    color: #00ff99;
+}
+
+.terminal .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(0, 255, 153, 0.45);
+}
+
+/* Exit */
+/* Flicker effect for bye message */
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.4;
+    }
+}
+
+#bye .terminal-body {
+    animation: flicker 3s infinite;
+}
+
+/* animated dots */
+.dot-anim::after {
+    content: '';
+    animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: '';
+    }
+
+    33% {
+        content: '.';
+    }
+
+    66% {
+        content: '..';
+    }
+
+    100% {
+        content: '...';
+    }
+}
+
+.navbar .nav-link {
+    color: #c9d1d9;
+    font-family: "Fira Code", monospace;
+    font-size: small;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent);
+    /* neon on hover */
+}
+
+.navbar .nav-link.active {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Icons for contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(86px, 1fr));
+    gap: 12px;
+    justify-items: center;
+}
+
+
+.contact-grid a {
+    color: #ffffff
+}
+
+.contact-grid a:hover {
+    color: #ffffff;
+}
+
+.contact-card {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    text-decoration: none;
+    transition: transform .12s ease, box-shadow .2s ease, border-color .12s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(0, 255, 65, .12);
+}
+
+.contact-card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.contact-card i {
+    font-size: 1.35rem;
+}
+
+button.contact-card {
+    cursor: pointer;
+}

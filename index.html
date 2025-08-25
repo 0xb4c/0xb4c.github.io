@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <title>0xb4c - Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" tabindex="0">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top"
+            style="background:#161b22; border-bottom:1px solid #30363d; padding-top:0.25rem; padding-bottom:0.25rem; min-height:48px;">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <span style="color:#00ff41">0xb4c@lonelywolf:~$</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">./home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">./skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">./projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">./experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#publications">./publication</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">./contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <section id="home" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close" aria-hidden="true"></span>
+                        <span class="dot dot-min" aria-hidden="true"></span>
+                        <span class="dot dot-max" aria-hidden="true"></span>
+                    </div>
+                    <div class="term-title">0xb4c@lonelywolf:~ > ./portfolio.sh</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center">
+                            <img src="images/lonelywolf.jpg" alt="avatar" class="img-fluid rounded-circle mb-3"
+                                style="max-width:180px; border:2px solid #00ff41;">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="line">
+                                <span class="key">user</span>: <span class="val">Bac Trinh</span>
+                            </div>
+                            <div class="line">
+                                <span class="key">role</span>: <span class="val">PhD Candidate - Cybersecurity, ML, 6G
+                                    Security</span>
+                            </div>
+                            <div class="line">
+                                <span class="key">focus</span>: <span class="val">ML/DL, PLA, Trustworthiness in 6G
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="terminal-footer p-3">
+                    <div class="prompt-line">
+                        <span class="user">0xb4c@lonelywolf</span>:<span class="path">~</span>$ echo "<span
+                            id='typed'></span>"
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm" role="region" aria-labelledby="skills-title">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close" aria-hidden="true"></span>
+                        <span class="dot dot-min" aria-hidden="true"></span>
+                        <span class="dot dot-max" aria-hidden="true"></span>
+                    </div>
+                    <div class="term-title" id="skills-title">0xb4c@lonelywolf:~ > ./skills.sh</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="prompt-line mb-3"><span class="user">$</span> cat skills.json | jq '.highlights'</div>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card p-3 h-100">
+                                <h6 class="mb-2">Programming</h6>
+                                <p class="mb-0">Python, MATLAB, and some web development</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card p-3 h-100">
+                                <h6 class="mb-2">Machine Learning</h6>
+                                <p class="mb-0">PyTorch, Scikit-learn, River (online)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card p-3 h-100">
+                                <h6 class="mb-2">Security</h6>
+                                <p class="mb-0">Pentesting and user awareness training</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm" role="region" aria-labelledby="proj-title">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close" aria-hidden="true"></span>
+                        <span class="dot dot-min" aria-hidden="true"></span>
+                        <span class="dot dot-max" aria-hidden="true"></span>
+                    </div>
+                    <div class="term-title" id="proj-title">0xb4c@lonelywolf:~ > ./projects.sh</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="prompt-line mb-3"><span class="user">$</span> ls -la ./projects</div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card p-3 h-100">
+                                <h6 class="mb-1">
+                                    SET
+                                    <span class="text-accent">★ <span id="stars-set">--</span></span>
+                                </h6>
+                                <p class="mb-2">Subdomain Enumeration Tool (SET) helps enumerate quickly subdomains of a
+                                    domain by combining the power of DNSdumpster and Sublist3r.</p>
+                                <a href="https://github.com/0xb4c/SET" target="_blank" class="text-accent">
+                                    <i class="bi bi-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card p-3 h-100">
+                                <h6 class="mb-1">
+                                    pycaso
+                                    <span class="text-accent">★ <span id="stars-pycaso">--</span></span>
+                                </h6>
+                                <p class="mb-2">Simple OCR-based Captcha Solver (pycaso) allows to solve simple captcha
+                                    from URL, image file or from base64 string.</p>
+                                <a href="https://github.com/0xb4c/pycaso" target="_blank" class="text-accent">
+                                    <i class="bi bi-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm" role="region" aria-labelledby="exp-title">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close" aria-hidden="true"></span>
+                        <span class="dot dot-min" aria-hidden="true"></span>
+                        <span class="dot dot-max" aria-hidden="true"></span>
+                    </div>
+                    <div class="term-title" id="exp-title">0xb4c@lonelywolf:~ > tail -n 20 career.log</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="prompt-line mb-3"><span class="user">$</span> grep -i "security" career.log</div>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-transparent text-light border-secondary">
+                            <strong>PhD Candidate</strong> - ETIS Lab (2024- ) - 6G Security, PLA, CSI ML/DL
+                        </li>
+                        <li class="list-group-item bg-transparent text-light border-secondary">
+                            <strong>Teaching Assistant</strong> - ENSEA (2024- )
+                        </li>
+                        <li class="list-group-item bg-transparent text-light border-secondary">
+                            <strong>Cybersecurity engineer</strong> (2018- ) - Pentest, User Awareness Training
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm" role="region" aria-labelledby="pubs-title">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close"></span>
+                        <span class="dot dot-min"></span>
+                        <span class="dot dot-max"></span>
+                    </div>
+                    <div class="term-title" id="pubs-title">0xb4c@lonelywolf:~ > cat publications.txt</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="prompt-line mb-3"><span class="user">$</span> grep "selected" publications.txt</div>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-transparent text-light border-secondary">
+                            <strong>[2025]</strong> High-accuracy AoA-based Localization using Hierarchical ML
+                            Classifiers in Outdoor Environments - <em>IEEE
+                                Globecom</em>
+                            <a href="https://globecom2025.ieee-globecom.org/" target="_blank"
+                                class="text-accent">[Accepted]</a>
+                        </li>
+                        <li class="list-group-item bg-transparent text-light border-secondary">
+                            <strong>[2024]</strong> A Framework for Global Trust and Reputation Management in 6G
+                            Networks -
+                            <em>MLN'2024</em>
+                            <a href="https://www.researchgate.net/publication/385705828_A_Framework_for_Global_Trust_and_Reputation_Management_in_6G_Networks"
+                                target="_blank" class="text-accent">[View]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm" role="region" aria-labelledby="contact-title">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close" aria-hidden="true"></span>
+                        <span class="dot dot-min" aria-hidden="true"></span>
+                        <span class="dot dot-max" aria-hidden="true"></span>
+                    </div>
+                    <div class="term-title" id="contact-title">0xb4c@lonelywolf:~ > ./contact.sh</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="prompt-line mb-4"><span class="user">$</span> echo "ping me anytime"; cat contact.log
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="contact-grid">
+                            <a class="contact-card" href="https://github.com/0xb4c" target="_blank"
+                                rel="noopener noreferrer" aria-label="Open GitHub" data-bs-toggle="tooltip"
+                                data-bs-title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <button class="contact-card" type="button" data-copy="trinh-nguyen.bac@ensea.fr"
+                                data-bs-toggle="tooltip" title="Copy email"
+                                aria-label="Copy email">
+                                <i class="bi bi-envelope"></i>
+                            </button>
+
+                            <a class="contact-card" href="https://linkedin.com/in/bac-trinh-nguyen-53752b205"
+                                target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn"
+                                data-bs-toggle="tooltip" data-bs-title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="exit" class="container py-5">
+            <div class="terminal terminal--narrow shadow-sm" role="region" aria-labelledby="exit-title">
+                <div class="terminal-header d-flex align-items-center justify-content-between px-3">
+                    <div class="traffic">
+                        <span class="dot dot-close"></span>
+                        <span class="dot dot-min"></span>
+                        <span class="dot dot-max"></span>
+                    </div>
+                    <div class="term-title" id="exit-title">0xb4c@lonelywolf:~ > exit</div>
+                    <div class="term-right"></div>
+                </div>
+                <div class="terminal-body p-3">
+                    <div class="prompt-line mb-3"><span class="user">$</span> logout</div>
+                    <div class="prompt-line mb-2"><span class="user">[Process completed]</span></div>
+                    <p>Saving session<span class="dot-anim"></span></p>
+                    <p>Connection closed by foreign host.</p>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/typed.umd.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
